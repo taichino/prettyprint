@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 """
-   This module privides pretty printing for list/dict/tuple python object.
+   This module privides pretty printing for list/dict/tuple/set python object.
 
    Simple example of usage is followings
 
@@ -27,7 +27,7 @@
 """
 
 __author__  = "Matsumoto Taichi"
-__version__ = "0.1.2"
+__version__ = "0.1.4"
 __license__ = "MIT License"
 
 from prettyprint import *

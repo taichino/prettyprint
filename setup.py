@@ -13,7 +13,6 @@ if __name__ == '__main__':
     name             = 'prettyprint',
     version          = __version__,
     py_modules       = find_packages(exclude=["test"]),
-#    install_requires = ['simplejson>=2.0.9'],     # error occurs in my environment...
     description      = 'prettyprint print list/dict/tuple object prettily',
     long_description = __doc__,
     test_suite       = 'test',
