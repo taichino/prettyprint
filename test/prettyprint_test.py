@@ -29,8 +29,52 @@ class PrettyPrintTest(unittest.TestCase):
 
   def testSet(self):
     set1 = set(['John', 'Jane', 'Jack', 'Janice'])
-    print pp_str(set1)
-    self.assertTrue(True)
+    pp(set1)
+    expected='''
+[
+    "Jane", 
+    "Janice", 
+    "John", 
+    "Jack"
+]
+'''.strip()
+    self.assertEqual(pp_str(set1), expected)
+
+  def testNestedSet(self):
+    set1 = list([6, set([2,1,3]), 5,[3,1,2], None])
+    pp(set1)
+    expected='''
+[
+    6, 
+    [
+        1, 
+        2, 
+        3
+    ], 
+    5, 
+    [
+        3, 
+        1, 
+        2
+    ], 
+    null
+]
+'''.strip()
+    self.assertEqual(pp_str(set1), expected)
+
+  def testObject(self):
+    class MyClass(object):
+      def __str__(self):
+          return "<MyClass>"
+    ls = list([1, MyClass()])
+    pp(ls)
+    expected='''
+[
+    1, 
+    "<MyClass>"
+]
+'''.strip()
+    self.assertEqual(pp_str(ls), expected)
 
 if __name__ == '__main__':
   unittest.main()
