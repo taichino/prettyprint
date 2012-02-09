@@ -8,17 +8,30 @@ except ImportError:
 
 __all__ = ['pp', 'pp_str']
 
+class MyEncoder (json.JSONEncoder):
+    def default(self, o):
+        try:
+            iterable = iter(o)
+        except TypeError:
+            pass
+        else:
+            return list(iterable)
+        
+        try:
+            return json.JSONEncoder.default(self, o)
+        except TypeError:
+            return str(o)
+
 def pp(obj):
   print pp_str(obj)
 
 def pp_str(obj):
-  if isinstance(obj, set):
-    obj = list(obj)
-  if isinstance(obj, list) or isinstance(obj, dict) or isinstance(obj, tuple):
-    orig = json.dumps(obj, indent=4)
-    return eval("u'''%s'''" % orig).encode('utf-8')
-  else:
-    return obj
+  orig = json.dumps(obj, 
+               indent=4, 
+               sort_keys=True, 
+               skipkeys=True, 
+               cls=MyEncoder)
+  return eval("u'''%s'''" % orig).encode('utf-8')
 
 if __name__ == '__main__':
   target = ['want pretty printing', '望麗出力']
