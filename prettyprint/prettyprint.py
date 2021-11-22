@@ -23,7 +23,7 @@ class MyEncoder (json.JSONEncoder):
             return str(o)
 
 def pp(obj):
-  print pp_str(obj)
+  print(pp_str(obj))
 
 def pp_str(obj):
   orig = json.dumps(obj, 
@@ -35,10 +35,10 @@ def pp_str(obj):
 
 if __name__ == '__main__':
   target = ['want pretty printing', '望麗出力']
-  print target
+  print(target)
   pp(target)
   target_dict = {'order': {'en':'print prettily', 'ja':'綺麗に出力せよ'}}
-  print target_dict
+  print(target_dict)
   pp(target_dict)
 
   set1 = set(['John', 'Jane', 'Jack', 'Janice'])
@@ -46,6 +46,6 @@ if __name__ == '__main__':
 
   orig = set(['item1', 'item2'])
   res  = pp_str(orig)
-  print res
-  print json.loads(res)
+  print(res)
+  print(json.loads(res))
   
