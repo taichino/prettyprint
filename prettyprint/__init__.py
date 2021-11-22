@@ -27,6 +27,7 @@
 """
 
 __author__  = "Matsumoto Taichi"
+__updated__ = "Sasin Nisar"
 __version__ = "0.1.5"
 __license__ = "MIT License"
 
