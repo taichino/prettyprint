@@ -9,8 +9,8 @@ from prettyprint import __version__, __updated__, __license__, __author__, __doc
 if __name__ == '__main__':
   # build distribution package
   setup(
-    packages         = ('prettyprint',),
-    name             = 'prettyprint',
+    packages         = ('prettyprint2',),
+    name             = 'prettyprint2',
     version          = __version__,
     updated          = __updated__,
     py_modules       = find_packages(exclude=["test"]),
@@ -19,7 +19,8 @@ if __name__ == '__main__':
     test_suite       = 'test',
     author           = __author__,
     author_email     = 'taichino@gmail.com',
-    url              = 'https://github.com/SASIN83/prettyprint2/archive/refs/tags/prettyprint.tar.gz',
+    url              = 'https://github.com/SASIN83/prettyprint2/',
+    download_url     = 'https://github.com/SASIN83/prettyprint2/archive/refs/tags/prettyprint.tar.gz'
     keywords         = 'pretty print',
     license          = __license__,
     classifiers      = ["Development Status :: 3 - Alpha",
