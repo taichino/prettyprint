@@ -4,7 +4,7 @@ import sys
 import unittest
 
 import prettyprint
-from prettyprint import __version__, __license__, __author__, __doc__
+from prettyprint import __version__, __updated__, __license__, __author__, __doc__
 
 if __name__ == '__main__':
   # build distribution package
@@ -12,6 +12,7 @@ if __name__ == '__main__':
     packages         = ('prettyprint',),
     name             = 'prettyprint',
     version          = __version__,
+    updated          = __updated__,
     py_modules       = find_packages(exclude=["test"]),
     description      = 'prettyprint print list/dict/tuple object prettily',
     long_description = __doc__,
