@@ -19,7 +19,7 @@ if __name__ == '__main__':
     test_suite       = 'test',
     author           = __author__,
     author_email     = 'taichino@gmail.com',
-    url              = 'http://github.com/taichino/prettyprint',
+    url              = 'https://github.com/SASIN83/prettyprint2/archive/refs/tags/prettyprint.tar.gz',
     keywords         = 'pretty print',
     license          = __license__,
     classifiers      = ["Development Status :: 3 - Alpha",
