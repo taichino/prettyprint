@@ -19,6 +19,8 @@ if __name__ == '__main__':
     test_suite       = 'test',
     author           = __author__,
     author_email     = 'taichino@gmail.com',
+    maintainer_name  = __updated__
+    maintainer_email = 'nisarsasin123@gmail.com'
     url              = 'https://github.com/SASIN83/prettyprint2/',
     download_url     = 'https://github.com/SASIN83/prettyprint2/archive/refs/tags/prettyprint.tar.gz'
     keywords         = 'pretty print',
